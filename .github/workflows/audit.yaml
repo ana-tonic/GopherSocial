@@ -19,7 +19,7 @@ jobs:
 
       - name: Verify Dependencies
         run: |
-          go nid verify
+          go mod verify
 
       - name: Build
         run: go build -v ./...
