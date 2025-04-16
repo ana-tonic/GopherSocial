@@ -84,16 +84,16 @@ func main() {
 func insertUser(u User) error {
 	// input validation
 	if u.FirstName == "" {
-		return errors.New("First name is required")
+		return errors.New("first name is required")
 	}
 	if u.LastName == "" {
-		return errors.New("Last name is required")
+		return errors.New("last name is required")
 	}
 
 	// storage validation
 	for _, user := range users {
 		if user.FirstName == u.FirstName && user.LastName == u.LastName {
-			return errors.New("User already exists")
+			return errors.New("user already exists")
 		}
 	}
 
